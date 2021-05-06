@@ -3,8 +3,8 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 var thunder, thunder1,thunder2,thunder3,thunder4;
 var batAnimation,bat;
-var maxDrops = 100;
-var drops;
+
+
 var engine, world;
 
 var rand;
@@ -34,7 +34,7 @@ function setup(){
     umbrella = new Umbrella(200,500);
 
     //create drops
-    drops = new Drops(200,30,5);
+   
     
 }
 
@@ -80,9 +80,7 @@ function draw(){
     umbrella.display();
 
     //display rain drops
-    for(var i = 0; i<maxDrops; i++){
-        drops.push(new Drops(random(0,400),random(0,400)));
-    }
+   
 
     drawSprites();
 }   
